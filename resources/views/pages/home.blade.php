@@ -28,6 +28,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card">
+                
                 <form method="POST" action="{{ url('/transaksi/add') }}" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="kode" value="{{Auth::user()->kode}}">
