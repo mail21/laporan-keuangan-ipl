@@ -5,6 +5,7 @@
     <div style="width: 50%;background:white;padding:20px;border-radius:7px;">
         <h3 class="text-center text-dark mb-5">Log in</h3>
         <form method="post" action="{{ route('login') }}">
+            @csrf
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="form-group position-relative has-icon-left mb-4">
                 <input id="kode" type="text" class="form-control{{ $errors->has('kode') ? ' is-invalid' : '' }}" name="kode" value="{{ old('kode') }}" required autofocus placeholder="kode">
