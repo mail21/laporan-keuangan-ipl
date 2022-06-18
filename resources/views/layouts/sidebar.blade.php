@@ -4,12 +4,13 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="{{ url('/') }}">
+        <a class="nav-link collapsed" href="{{ url('/') }}">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
+     @if (Auth::user()->role == 'super')
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
           <i class="bi bi-menu-button-wide"></i><span>Master</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -22,13 +23,7 @@
           </li>
         </ul>
       </li><!-- End Components Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ url('laporan') }}">
-          <i class="bi bi-journal-text"></i>
-          <span>Laporan</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+     @endif
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{ url('transaksi') }}">
@@ -38,7 +33,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ url('profile') }}">
+        <a class="nav-link collapsed" href="{{ url('profile-admin') }}">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>

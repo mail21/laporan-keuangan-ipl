@@ -32,18 +32,16 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/home', [TransaksiController::class, 'index']);
     Route::post('/transaksi/add',  [TransaksiController::class, 'store']);
+    Route::post('/transaksi/admin/add',  [TransaksiController::class, 'store_from_admin']);
     Route::post('/transaksi/reject',  [TransaksiController::class, 'reject']);
     Route::post('/transaksi/approve',  [TransaksiController::class, 'approve']);
-    
-    
+
+    Route::get('/cetak-all', [TransaksiController::class, 'cetak_all'])->name('cetak.all');
+
     Route::get('/transaksi', [TransaksiController::class, 'index_transaksi']);
 
-    
-    Route::get('/laporan', function () {
-        return view('pages.laporan');
-    });
+    Route::get('/profile-admin', [UserController::class, 'index_profile_admin']);
+    Route::get('/profile', [UserController::class, 'index_profile_user']);
+    Route::post('/user/ubah_password', [UserController::class, 'ubahPassword']);
+    Route::post('/admin/ubah_password', [UserController::class, 'ubahPasswordAdmin']);
 });
-
-
-
-

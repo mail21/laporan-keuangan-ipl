@@ -113,8 +113,7 @@
 
 <script src="{{ asset('assets/js/mazer.js') }}"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-<script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
 
 <!-- <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.js"></script> -->
 <script type="text/javascript" src="{{ asset('assets/vendors/jquery-datatables/jquery.dataTables.min.js') }}"></script>
@@ -126,7 +125,8 @@
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
 <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
  --}}
-
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+ <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 
     {{-- nice admin template --}}
        <!-- Vendor JS Files -->
