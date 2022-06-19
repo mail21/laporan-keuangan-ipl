@@ -55,7 +55,7 @@
 
 
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> --}}
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.css" />
+    {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.4/datatables.min.css" /> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -81,7 +81,7 @@
         <link href="{{asset("vendorNiceAdmin/quill/quill.snow.css")}}" rel="stylesheet">
         <link href="{{asset("vendorNiceAdmin/quill/quill.bubble.css")}}" rel="stylesheet">
         <link href="{{asset("vendorNiceAdmin/remixicon/remixicon.css")}}" rel="stylesheet">
-        <link href="{{asset("vendorNiceAdmin/simple-datatables/style.css")}}" rel="stylesheet">
+        {{-- <link href="{{asset("vendorNiceAdmin/simple-datatables/style.css")}}" rel="stylesheet"> --}}
 
         <link href="{{ asset('cssNiceAdmin/styleNiceAdmin.css') }}" rel="stylesheet">
 
