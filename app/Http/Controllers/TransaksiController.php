@@ -65,9 +65,13 @@ class TransaksiController extends Controller
             }
         }
 
+        // mysql
+        // $datas = DB::select(DB::raw("select users.kode, transaksis.status from users LEFT join transaksis on transaksis.kode_rumah = users.kode 
+        // AND year(transaksis.tgl_bayar) = $tahun and month(transaksis.tgl_bayar) = $bulan $filter"));
 
-        $datas = DB::select(DB::raw("select users.kode, transaksis.status from users LEFT join transaksis on transaksis.kode_rumah = users.kode 
-        AND year(transaksis.tgl_bayar) = $tahun and month(transaksis.tgl_bayar) = $bulan $filter"));
+        // postgre
+        $datas = DB::select(DB::raw("select users.kode AS Kode_Rumah, users.nama,transaksis.status, transaksis.tgl_bayar, transaksis.created_at AS tanggal_upload from users LEFT join transaksis on transaksis.kode_rumah = users.kode 
+        AND EXTRACT(YEAR FROM transaksis.tgl_bayar) = $request->tahun and EXTRACT(MONTH FROM transaksis.tgl_bayar) = $request->bulan $filter"));
 
         return view('pages.dashboard', compact('datas', 'area', 'tahun', 'bulan', 'status'));
     }
@@ -239,8 +243,13 @@ class TransaksiController extends Controller
             }
         }
 
+        //mysql
+        // $datas = DB::select(DB::raw("select users.kode AS Kode_Rumah, users.nama,transaksis.status, transaksis.tgl_bayar, transaksis.created_at AS tanggal_upload from users LEFT join transaksis on transaksis.kode_rumah = users.kode 
+        // AND year(transaksis.tgl_bayar) = $request->tahun and month(transaksis.tgl_bayar) = $request->bulan $filter"));
+
+        //postgre
         $datas = DB::select(DB::raw("select users.kode AS Kode_Rumah, users.nama,transaksis.status, transaksis.tgl_bayar, transaksis.created_at AS tanggal_upload from users LEFT join transaksis on transaksis.kode_rumah = users.kode 
-        AND year(transaksis.tgl_bayar) = $request->tahun and month(transaksis.tgl_bayar) = $request->bulan $filter"));
+        AND EXTRACT(YEAR FROM transaksis.tgl_bayar) = $request->tahun and EXTRACT(MONTH FROM transaksis.tgl_bayar) = $request->bulan $filter"));
 
         return $datas;
     }
