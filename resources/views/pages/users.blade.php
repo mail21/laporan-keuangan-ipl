@@ -77,7 +77,7 @@
         </div>
         <div class="card">
             <div class="table-responsive">
-                <table class="table card-table table-vcenter text-nowrap datatable">
+                <table class="table card-table table-vcenter text-nowrap">
                     <thead>
                         <tr class="text-center">
                             <th scope="row">Kode</th>
